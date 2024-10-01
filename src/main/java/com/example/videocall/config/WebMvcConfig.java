@@ -11,7 +11,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**") // Adjust your mapping
-                .allowedOrigins("https://video-call-front-tawny.vercel.app") // Your Vercel frontend URL
+                .allowedOrigins("https://video-call-front-tawny.vercel.app/api/**") // Your Vercel frontend URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allowed HTTP methods
                 .allowedHeaders("*") // Allow all headers
                 .allowCredentials(true) // Allow credentials if needed
