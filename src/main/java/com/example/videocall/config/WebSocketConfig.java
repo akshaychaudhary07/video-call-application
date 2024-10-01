@@ -29,7 +29,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(signalingHandler, "/webrtc-signaling") // Corrected to use the handler bean
-                .setAllowedOrigins("http://localhost:3000") // Make sure this matches your frontend
+                .setAllowedOrigins("https://video-call-front-tawny.vercel.app") // Update to your Vercel frontend URL
                 .addInterceptors(new HttpSessionHandshakeInterceptor());
     }
 
